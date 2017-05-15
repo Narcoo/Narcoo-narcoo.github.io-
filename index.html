@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+
+<link rel="stylesheet" href="plugins/foundation/foundation.min.css"/>
+<!-- Insert this within your head tag and after foundation.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.1.1/motion-ui.min.css" />
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header id="main-header">
+		<?php require_once 'food-menu.php'; ?>
+		<nav id="main-navigation">
+			<ul>
+				<li>Home</li>
+				<li>Menu</li>
+				<li>Gallery</li>
+				<li>About Us</li>
+				<li>Contact Us</li>
+			</ul>
+		</nav>
+		<div class="float-logo"></div>
+		<h3>-pizza <br> and beer</h3>
+	</header>
+	<section id="section1" class="section">
+		<div class="section1-container">
+			<header id="picks-menu">
+				<h3>Our Picks</h3>
+			</header>
+			<article class="our-choice">
+				<div class="selecetion selection1">
+					<header class="choice-top-header">
+						<h3>The Meaty One </h3>
+						<span>Organic crushed tomato / pepperoni / spicy soppressata / pork & fennel sausage / fior di latte</span>
+					</header>
+					<article class="choice-top-article">
+						<img src="http://www.cicis.com/media/1138/pizza_trad_pepperoni.png" alt="">
+					</article>
+				</div>
+				<div class="selecetion selection1">
+					<header class="choice-top-header">
+						<h3>The Sweet & Spicy Snag </h3>
+						<span>Organic crushed tomato / pork & fennel sausage / caramelized organic onion / organic chile / fior di latte</span>
+					</header>
+					<article class="choice-top-article">
+						<img src="http://www.cicis.com/media/1138/pizza_trad_pepperoni.png" alt="">
+					</article>
+				</div>
+				<div class="selecetion selection1">
+					<header class="choice-top-header">
+						<h3>The Greek</h3>
+						<span>Organic crushed tomato / farm mushroom / red onion / kalamata olives / organic roasted garlic / Crow's Dairy feta</span>
+					</header>
+					<article class="choice-top-article">
+						<img src="http://www.cicis.com/media/1138/pizza_trad_pepperoni.png" alt="">
+					</article>
+				</div>
+			</article>
+			
+		</div>
+	</section>
+	<section id="section-break1"></section>
+	<section id="section2" class="section">
+		<header id="menu-header">
+			<h3>Menu</h3>
+		</header>
+		<article id="menu">
+			<div class="sides left-menu">
+				<?php 
+					pizza();
+					beer();
+	 			?>
+			</div>
+			<div class="sides right-menu">
+				<?php salads(); ?>
+				<?php grill(); ?>
+			</div>
+		</article>
+	</section>
+	<section id="section3" class="section">
+		
+		<article id="section3-article">
+			<div class="sec3-left sec3-skew">
+				<header id="section3-header">
+					
+					<article>
+						<h3>Find us here.</h3>
+						<div class="adress">
+							<i class="fa fa-address-card" aria-hidden="true"></i>
+							<span>Kolodvorska 20, 31224, koska</span>
+						</div>
+						<div class="phone">
+							<i class="fa fa-phone-square" aria-hidden="true"></i>
+							<span>(+385)681-475</span>
+						</div>
+						<div class="hours">
+							<i class="fa fa-clock-o" aria-hidden="true"></i>
+							<span>07:00 - 23:00</span>
+						</div>
+								</article>
+							</header>
+						</div>
+			<div class="sec3-right sec3-skew"></div>
+		</article>
+	</section>
+	<section id="section-loc"></section>
+	<footer>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</footer>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="plugins/foundation/foundation.min.js" ></script>
+
+<script src="plugins/foundation/js/foundation.abide.js"></script>
+<script src="plugins/foundation/js/foundation.util.motion.js"></script>
+
+<script src="plugins/foundation/js/foundation.orbit.js"></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script>
+	$( document ).ready(function()
+	{
+		$(document).foundation();
+
+
+	});
+</script>
+ <script>
+      function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('section-loc'), {
+          zoom: 18,
+          center: uluru
+
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDHcywDoIxHSTJ-W-8T4zP1bUpVAshktqI&callback=initMap"
+  type="text/javascript"></script>
+</body>
+</html>
